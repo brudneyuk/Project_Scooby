@@ -220,6 +220,8 @@ body {
     font-weight: 500;
 }
 
+/* COMEÇO DO VETOR */
+
 .container4 {
     display: flex;
     flex-direction: row;

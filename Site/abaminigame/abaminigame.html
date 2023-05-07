@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../abaminigame/css/minigame.css">
+</head>
+
+<body>
+    <!-- COMEÇO DO HEADER -->
+    <div class="header">
+        <div class="container">
+            <h2><img id="logo" src="../img/Scooby_doo_logo.png" alt=""></h2>
+            <ul class="naveBar">
+                <li id="textheader"><a id="textheader" href="../abaposlogin/home.html">Episódios</a></li>
+                <li id="textheader"><a id="textheader" href=""><img id="imgloc" src="../img/flor.png" alt="">
+                        Mini-game</a></li>
+                <li id="textheader"><a id="textheader" href="../abaprincipal/principal.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sobrepor1"><img src="../img/flor.png" alt="" />
+    </div>
+    <div class="sobrepor2"><img src="../img/flor.png" alt="" />
+    </div>
+    <div class="sobrepor3"><img src="../img/theMysteryMACHINE.png" alt="" />
+    </div>
+    <!-- FIM DO HEADER -->
+    <div class="banner">
+        <div class="container1">
+            <div class="container11">
+                <div class="box1">
+                    Insira a quantidade de Scooby snacks que o Scooby comeu:<br/> <input type="number" id="input_snacks">
+                    <br />
+                    insira a quantidade de monstros atrás do Scooby:<br/> <input type="number" id="input_monstro"> <br />
+                </div>
+            </div>
+            <div class="container22">
+                <button id="ccorrer" onclick="Correr()">Pernas pra que te quero</button>
+            </div>
+            <div class="container33">
+                <div class="box3">
+                    <div id="div_correr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function Correr() {
+        var snacks = Number(input_snacks.value);
+        var monstros = Number(input_monstro.value);
+        var monstros_por_snacks = monstros * 5;
+        var sobrou = snacks - monstros_por_snacks;
+
+        div_correr.innerHTML = ``;
+
+        if (snacks >= monstros_por_snacks &&
+            snacks >= 5 &&
+            monstros <= 200 &&
+            snacks <= 1000) {
+            for (contador = 1; contador <= monstros; contador++) {
+                div_correr.innerHTML += `<img src="https://i.gifer.com/j9b.gif"width="100px" height="100px"/<br/>`;
+            }
+            div_correr.innerHTML += `<img src="https://media.tenor.com/Ol-fohcEi10AAAAC/running-scooby-doo.gif"width="100px" height="100px"/><br/>`;
+            div_correr.innerHTML += `<img src="https://media.tenor.com/3ljhUCGK8lYAAAAC/scooby-doo.gif"width="550px" height="500px"/><br/>`;
+            div_correr.innerHTML += `<b>O Scooby conseguiu fugir <br/>
+            Sobrou ${sobrou} snacks para ele</b>`
+        }else {
+            var faltou = monstros_por_snacks - snacks;
+            div_correr.innerHTML += `<img src="https://media.tenor.com/M4jALK1j-pIAAAAd/scooby-doo.gif"width="550px" height="500px"/> <br/>`;
+            div_correr.innerHTML += `<b>O Scooby foi pego, faltou ${faltou}</b>`
+        }
+    }
+</script>
