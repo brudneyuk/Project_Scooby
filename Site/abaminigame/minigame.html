@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de Scooby snacks que o Scooby comeu: <input type="number" id="input_snacks"> <br />
+    insira a quantidade de monstros atrás do Scooby: <input type="number" id="input_monstro"> <br />
+    <button onclick="Correr()">Pernas pra que te quero</button>
+    <div id="div_correr"></div>
+</body>
+
+</html>
+<script>
+    function Correr() {
+        var snacks = Number(input_snacks.value);
+        var monstros = Number(input_monstro.value);
+        var monstros_por_snacks = monstros * 5;
+
+        div_correr.innerHTML = ``;
+
+        if (snacks >= monstros_por_snacks &&
+            snacks >= 5 &&
+            monstros <= 200 &&
+            snacks <= 1000) {
+            for (contador = 1; contador <= monstros; contador++) {
+                div_correr.innerHTML += `<img src="https://i.gifer.com/j9b.gif"width="100px" height="100px"/<br/>`;
+            }
+            div_correr.innerHTML += `<img src="https://media.tenor.com/Ol-fohcEi10AAAAC/running-scooby-doo.gif"width="100px" height="100px"/><br/>`;
+            div_correr.innerHTML += `<img src="https://media.tenor.com/3ljhUCGK8lYAAAAC/scooby-doo.gif"width="550px" height="500px"/><br/>`;
+        }else {
+            div_correr.innerHTML += `<img src="https://media.tenor.com/M4jALK1j-pIAAAAd/scooby-doo.gif"width="550px" height="500px"/<br/>`;
+        }
+    }
+</script>

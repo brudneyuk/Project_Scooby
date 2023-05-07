@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../abaposlogin/css/home.css">
+</head>
+
+<body>
+    <!-- COMEÇO DO HEADER -->
+    <div class="header">
+        <div class="container">
+            <h2><img id="logo" src="../img/Scooby_doo_logo.png" alt=""></h2>
+            <ul class="naveBar">
+                <li id="textheader"><a id="textheader" href=""><img id="imgloc" src="../img/flor.png" alt="">
+                        Episódios</a></li>
+                <li id="textheader"><a id="textheader" href="">Mini-game</a></li>
+                <li id="textheader"><a id="textheader" href="../abaprincipal/principal.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sobrepor1"><img src="../img/flor.png" alt="" />
+    </div>
+    <div class="sobrepor2"><img src="../img/flor.png" alt="" />
+    </div>
+    <div class="sobrepor3"><img src="../img/theMysteryMACHINE.png" alt="" />
+    </div>
+    <!-- FIM DO HEADER -->
+    <div class="banner">
+        <div class="container1">
+            <div class="box1">
+                <img src="../img/whereareyou.webp" alt="">
+            </div>
+            <div class="box2">
+                <h1>"Scooby-Doo, Where Are You!"</h1>
+                <div class="box22">
+                    <span>Ele foi lançado em 1969 nos Estados Unidos e foi a série que deu origem à franquia Scooby-Doo.
+                        Foi criado por Joe Ruby e Ken Spears, e produzido pela Hanna-Barbera Productions. A série
+                        apresentava um grupo de jovens investigadores - Fred, Daphne, Velma, Salsicha e o cão
+                        dinamarquês Scooby-Doo - que viajavam em sua van chamada "Mystery Machine" em busca de mistérios
+                        para solucionar. "Scooby-Doo, Where Are You!" foi um grande sucesso e estabeleceu o formato e a
+                        fórmula que se tornaram características marcantes de toda a franquia Scooby-Doo.</span>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box4">
+                <h1>"Scooby-Doo! What's New, Scooby-Doo?"</h1>
+                <div class="box44">
+                    <span>"Scooby-Doo! What's New, Scooby-Doo?" trouxe uma atmosfera mais contemporânea para a franquia,
+                        com histórias ambientadas em locais modernos e com referências à cultura pop da época. Além
+                        disso, a animação apresentava uma estética visual atualizada, mantendo o estilo único dos
+                        personagens, mas com uma abordagem mais nítida e colorida.
+
+                        A série foi bem recebida pelo público e pelos fãs do Scooby-Doo, proporcionando uma nova geração
+                        de episódios divertidos e misteriosos. Embora tenha sido encerrada após sua quarta temporada,
+                        "Scooby-Doo! What's New, Scooby-Doo?" deixou um legado duradouro e contribuiu para a contínua
+                        popularidade da franquia.</span>
+                </div>
+            </div>
+            <div class="box3">
+                <img src="../img/whatsnew.webp" alt="">
+            </div>
+        </div>
+        <div class="container3">
+            <div class="box5">
+                <img src="../img/scooby-doo-2.jpg" alt="">
+            </div>
+            <div class="box6">
+                <h1>"Scooby-Doo 2: Monstros à Solta"</h1>
+                <div class="box66">
+                    <span>No filme, o grupo de investigadores composto por Scooby-Doo, Salsicha, Fred, Daphne e Velma se
+                        reúne novamente para enfrentar uma nova ameaça. Uma série de monstros que antes eram apenas
+                        fantasias em um museu ganham vida e começam a aterrorizar a cidade de Coolsville. A Mistério S/A
+                        deve descobrir quem está por trás dessa conspiração e impedir que os monstros continuem a
+                        espalhar o caos.
+
+                        "Scooby-Doo 2: Monstros à Solta" mantém o tom leve e divertido da série animada original, com
+                        uma mistura de comédia, aventura e mistério. O filme apresenta uma série de referências e
+                        homenagens aos personagens clássicos da série, bem como a inclusão de novos mistérios a serem
+                        resolvidos.
+
+                        Embora tenha recebido críticas mistas, o filme foi um sucesso comercial, arrecadando uma boa
+                        bilheteria ao redor do mundo. Ele também ajudou a manter a popularidade da franquia Scooby-Doo
+                        no cinema e no público em geral, reforçando a adoração pelos personagens e suas histórias.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="boxx1">
+                <h1>Faça sua lista de filmes favoritos</h1>
+                <input type="text" id="input_filme"/> <br/>
+                <button id="botao_colocar" onclick="colocar()">Colocar na lista</button>
+                <div class="boxx11">
+                    <div id="div_exibir"></div>
+                </div>
+            </div>
+            <div class="boxx2">
+                <div class="boximg">
+                    <img src="../img/simpleplan.webp" alt="">
+                </div>
+                <audio controls>
+                    <source src="../musicaSimplePlan/musica.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    var listadefilmes = [];
+
+    function colocar() {
+        var filme = input_filme.value;
+        listadefilmes.push(filme)
+        div_exibir.innerHTML = ``;
+        for(var contador = 0; contador < listadefilmes.length; contador++){
+            div_exibir.innerHTML += `${contador + 1}º${listadefilmes[contador]}<br/>`
+        }
+    }
+</script>
